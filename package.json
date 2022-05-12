@@ -1,18 +1,35 @@
 {
-  "name": "trabalhofinal",
-  "productName": "trabalhofinal",
-  "version": "1.0.0",
+  "name": "biggersize",
+  "productName": "BiggerSize",
+  "version": "0.1.1",
   "description": "My Electron application description",
   "main": "src/index.js",
+   "author": "Isadora G. Bocalon <isadoragbocalon@gmail.com>",
+    "build": {
+      "appId": "br.edu.unoesc.biggersize",   
+      "linux": {
+        "target": [
+          "AppImage",
+          "deb"
+        ]
+      },
+      "publish": [
+        {
+          "provider": "github"
+        }
+      ]
+    },
+ 
+    "private": true,
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "eslint src --color"
+    "lint": "eslint \" ** /* . {j,t}, \"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "release": "npm run dist && electron-builder --linux --win --mac --x64 --ia32 --publish never",
+    "publish": "npm run dist -- -p always"
+
   },
   "keywords": [],
-  "author": "S218",
   "license": "MIT",
   "config": {
     "forge": {
@@ -60,8 +77,22 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.29.4"
-  }
+    "eslint-plugin-react": "^7.29.4",
+    "electron-builder": "^23.0.3"
+  },
 
+  "win": {
+    "target": "portable"
+  },
+
+  "linux": {
+    "target": "AppImage"
+  },
   
+  "mac": {
+    "category": "your.app.category.type"
+  },
+
+  "postintall": "electron-builder install app-deps"
+
 }
