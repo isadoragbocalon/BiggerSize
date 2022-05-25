@@ -26,7 +26,8 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "release": "npm run dist && electron-builder --linux --win --mac --x64 --ia32 --publish never",
-    "publish": "npm run dist -- -p always"
+    "publish": "npm run dist -- -p always",
+    "start": "electron-forge start"
 
   },
   "keywords": [],
