@@ -1,8 +1,30 @@
-<head>  
+<head>
     <link rel="stylesheet" type="text/css" href="game.css">
+
+    <script type="text/javascript">
+        function playNaMusica() {
+
+            var mysound = document.getElementById("som");
+            mysound.autoplay = 'true';
+            mysound.load();
+
+            alert('ISADORA E GUSTAVO - AMOR ETERNO');
+        }
+    </script>
+
 </head>
 
+<body onload="playNaMusica()">
+
+    <audio id="som">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+
 <div class="score">0</div>
+
 <div class="stage">0</div>
 
 <script src="game.js"></script>
