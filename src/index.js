@@ -15,7 +15,7 @@ const criarBrowserWindow = () => {
     autoHideMenuBar: true,
   });
 
-  browserWindow.loadURL(`file://${__dirname}/cob.html`);
+  browserWindow.loadURL(`file://${__dirname}/components/home/home.html`);
 
   browserWindow.on('closed', () => {
     browserWindow = null;

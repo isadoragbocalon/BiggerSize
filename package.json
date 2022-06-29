@@ -4,23 +4,22 @@
   "version": "0.1.1",
   "description": "My Electron application description",
   "main": "src/index.js",
-   "author": "Isadora G. Bocalon <isadoragbocalon@gmail.com>",
-    "build": {
-      "appId": "br.edu.unoesc.biggersize",   
-      "linux": {
-        "target": [
-          "AppImage",
-          "deb"
-        ]
-      },
-      "publish": [
-        {
-          "provider": "github"
-        }
+  "author": "Isadora G. Bocalon <isadoragbocalon@gmail.com>",
+  "build": {
+    "appId": "br.edu.unoesc.biggersize",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
       ]
     },
- 
-    "private": true,
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ]
+  },
+  "private": true,
   "scripts": {
     "lint": "eslint \" ** /* . {j,t}, \"",
     "pack": "electron-builder --dir",
@@ -28,7 +27,6 @@
     "release": "npm run dist && electron-builder --linux --win --mac --x64 --ia32 --publish never",
     "publish": "npm run dist -- -p always",
     "start": "electron-forge start"
-
   },
   "keywords": [],
   "license": "MIT",
@@ -72,28 +70,24 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "electron-builder": "^23.0.3",
     "electron-forge": "^5.2.4",
+    "electron-packager": "^15.5.1",
     "electron-prebuilt-compile": "8.2.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.29.4",
-    "electron-builder": "^23.0.3"
+    "eslint-plugin-react": "^7.29.4"
   },
-
   "win": {
     "target": "portable"
   },
-
   "linux": {
     "target": "AppImage"
   },
-  
   "mac": {
     "category": "your.app.category.type"
   },
-
   "postintall": "electron-builder install app-deps"
-
 }

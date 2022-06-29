@@ -1,0 +1,25 @@
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 100%;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: rgb(86, 170, 145);
+}
+
+section p {
+    text-align: center;
+    font-family: Cantarell, Calibri;
+    font-size: 2em;
+    background-color: rgb(224, 224, 224);
+    border-radius: 20px;
+    padding: 15px;
+}
