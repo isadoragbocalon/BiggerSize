@@ -75,25 +75,25 @@ body {
 }
 
 .tile.up:before {
-  border-bottom: 4px inset red;
+  border-bottom: 4px inset pink;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
 }
 
 .tile.down:before {
-  border-top: 4px inset red;
+  border-top: 4px inset pink;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
 }
 
 .tile.left:before { 
-  border-right: 4px inset red;
+  border-right: 4px inset pink;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
 
 .tile.right:before { 
-  border-left: 4px inset red;
+  border-left: 4px inset pink;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
@@ -117,7 +117,7 @@ body {
 }
 
 .tile.pressed {
-  background: red;
-  box-shadow: green;
+  background: pink;
+  box-shadow: pink;
   transition-duration: 0ms;
 }
